@@ -1,0 +1,138 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: linear-gradient(135deg, #e0eafc, #cfdef3);
+    padding: 20px;
+}
+
+form {
+    background-color: #ffffff;
+    padding: 40px;
+    border-radius: 16px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+    width: 100%;
+    max-width: 480px;
+}
+
+h2 {
+    margin-bottom: 24px;
+    color: #1a202c;
+    font-size: 24px;
+    font-weight: 700;
+    text-align: center;
+}
+
+.input-group {
+    margin-bottom: 18px;
+    position: relative;
+}
+
+label {
+    display: block;
+    margin-bottom: 6px;
+    font-size: 14px;
+    font-weight: 600;
+    color: #4a5568;
+}
+
+input {
+    width: 100%;
+    padding: 12px 16px;
+    border: 2px solid #e2e8f0;
+    border-radius: 8px;
+    font-size: 15px;
+    color: #2d3748;
+    transition: all 0.3s ease-in-out;
+}
+
+.input-row {
+    display: flex;
+    gap: 15px; /* Espaço entre o número e o complemento */
+}
+
+.input-row .input-group:nth-child(1) {
+    flex: 1; /* O número fica menor */
+}
+
+.input-row .input-group:nth-child(2) {
+    flex: 2; /* O complemento ganha mais espaço */
+}
+
+
+input:focus {
+    border-color: #3182ce;
+    outline: none;
+    box-shadow: 0 0 3px rgba(66, 153, 255, 0.15);
+}
+
+.checkbox-group {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    margin-top: 6px;
+}
+
+/* Reduz o tamanho do checkbox e altera o cursor */
+.checkbox-group input[type="checkbox"] {
+    width: auto;
+    cursor: pointer;
+}
+
+/* Remove a margem padrão das labels normais para alinhar o texto do lado */
+.checkbox-group .label-inline {
+    display: inline;
+    margin-bottom: 0;
+    font-size: 13px;
+    font-weight: 500;
+    color: #718096;
+    cursor: pointer;
+}
+
+
+/* Estilos para campos automáticos */
+input:read-only {
+    background-color: #f7fafc;
+    border-color: #cbd5e0;
+    color: #718096;
+    cursor: not-allowed;
+    border-color: #edf2f7;
+}
+
+.error-message {
+    color: #e53e3e;
+    font-size: 12px;
+    margin-top: 4px;
+    display: none;
+}
+
+button {
+    width: 100%;
+    padding: 14px;
+    background-color: #3182ce;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.2s;
+    margin-top: 10px;
+}
+
+button:hover {
+    background-color: #2b6cb0;
+}
+
+button:disabled {
+    background-color: #a0aec0;
+    cursor: not-allowed;
+}

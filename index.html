@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário de Endereço</title>
+    
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <form id="form-endereco" autocomplete="off">
+        <h2>Buscar Endereço</h2>
+
+        <div class="input-group">
+            <label for="cep">CEP:</label>
+            <input type="text" id="cep" maxlength="9" placeholder="00000-000" required />
+            <div id="error-cep" class="error-message">Cep inválido ou não encontrado!</div>
+        </div>
+
+        <div class="input-group">
+            <label for="logradouro">Logradouro:</label>
+            <input type="text" id="logradouro"  readonly tabindex="-1" />
+        </div>
+
+        <!-- Nova linha para Número e Complemento -->
+        <div class="input-row">
+            <div class="input-group">
+                <label for="numero">Número:</label>
+                <input type="text" id="numero" placeholder="Ex: 123" />
+
+                <div class="checkbox-group">
+                    <input type="checkbox" id="sem-numero" />
+                    <label for="sem-numero" class="label-inline">Sem número</label>
+                </div>
+            </div>
+            <div class="input-group">
+                <label for="complemento">Complemento:</label>
+                <input type="text" id="complemento" placeholder="Ex: Apto, Bloco, Quadra, etc." />
+            </div>
+        </div>
+
+
+        <div class="input-group">
+            <label for="bairro">Bairro:</label>
+            <input type="text" id="bairro" readonly tabindex="-1" />
+        </div>
+
+        <div class="input-group">
+            <label for="localidade">Cidade:</label>
+            <input type="text" id="localidade" readonly tabindex="-1" />
+        </div>
+
+        <div class="input-group">
+            <label for="estado">Estado (UF):</label>
+            <input type="text" id="estado" readonly tabindex="-1" />
+        </div>
+
+        <button type="submit" id="btn-enviar">Enviar</button>
+        
+    </form>
+    <script src="script.js" defer></script>
+</body>
+</html>
